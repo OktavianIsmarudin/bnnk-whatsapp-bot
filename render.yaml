@@ -1,0 +1,10 @@
+version: 2
+build:
+  - name: web
+    env: php
+    buildCommand: "./render-deploy.sh"
+    startCommand: "php artisan serve --host=0.0.0.0 --port=$PORT"
+databases:
+  - name: bnnk-whatsapp-db
+    databaseName: bnnk_whatsapp
+    user: bnnk_user
